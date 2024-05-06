@@ -29,18 +29,18 @@ SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://graph.org/file/72763ab73f27
 CODE = (environ.get('CODE', 'https://t.me/About_HK_Bot/2'))
 
 #stream link shortner
-STREAM_SITE = (environ.get('STREAM_SITE', 'paisakamalo.in'))
-STREAM_API = (environ.get('STREAM_API', '16badb4cdfbd26689b88c28d4385b24b5ec85d81'))
+STREAM_SITE = (environ.get('STREAM_SITE', 'zipshort.net'))
+STREAM_API = (environ.get('STREAM_API', 'c6bf8cb7fdbe48042e55a40955112c379340c0c9')
 STREAMHTO = (environ.get('STREAMHTO', 'https://youtube.com/shorts/uZx0TqgfZ_Q?si=4_GOjLSyw4HbXchM'))
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '-5469498838').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split()]
-auth_channel = environ.get('AUTH_CHANNEL', '')
-auth_grp = environ.get('AUTH_GROUP')
+auth_channel = environ.get('AUTH_CHANNEL', '1002137388056')
+auth_grp = environ.get('AUTH_GROUP', '1002023074231')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 support_chat_id = environ.get('SUPPORT_CHAT_ID', '')
@@ -54,16 +54,16 @@ STREAM_MODE = bool(environ.get('STREAM_MODE', True)) # Set True or Flase
 SURL = environ.get("SURL", "https://nice-meris-mahaan.koyeb.app/")
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_URI2 = environ.get('DATABASE_URI2', "")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://teekam:teekamtannu@cluster0.teuqdq5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://teekam4334:teekamtannu@cluster0.t66umyx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "kushalhk")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', '')
-SHORTLINK_API = environ.get('SHORTLINK_API', '')
-IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'zipshort.net')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'c6bf8cb7fdbe48042e55a40955112c379340c0c9')
+IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "5")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
